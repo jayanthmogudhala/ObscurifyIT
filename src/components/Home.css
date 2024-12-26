@@ -1,0 +1,47 @@
+/* Home.css */
+.home-container {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    background-color:beige;
+    font-family: Arial, sans-serif;
+  }
+  
+  .welcome-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 30px;
+  }
+  
+  .file-drop-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .file-drop {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed #aaa;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s, border-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .file-drop:hover {
+    background-color: #f0f0f0;
+    border-color: #333;
+  }
+  
+  .file-drop p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+  }
+  
