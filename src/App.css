@@ -1,0 +1,195 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+/* Header and Navbar Styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.left-nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.left-nav li {
+  margin-right: 20px;
+}
+
+.left-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.left-nav a:hover {
+  text-decoration: underline;
+  background-color: #444;
+  border-radius: 4px;
+}
+
+/* Right Side (Brightness Slider and Sign In/Up Buttons) */
+.right-nav {
+  display: flex;
+  align-items: center;
+}
+
+.right-nav label {
+  margin-right: 10px;
+  color: white;
+}
+
+.right-nav input[type="range"] {
+  margin-right: 15px;
+}
+
+.right-nav button {
+  padding: 8px 16px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.right-nav button:hover {
+  background-color: #3f4b91;
+}
+
+/* Main Content Styles */
+main {
+  text-align: center;
+  padding: 50px;
+}
+
+main h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+button.main-action {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button.main-action:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Auth Form Styles */
+.auth-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.auth-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5c6bc0;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-form button:hover {
+  background-color: #3f4b91;
+}
+
+/* Brightness Styles */
+.brightness-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.brightness-control label {
+  font-size: 14px;
+  color: #333;
+  margin-right: 10px;
+}
+
+.brightness-control input[type="range"] {
+  width: 200px;
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
