@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 // Import the components
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -20,36 +21,7 @@ function App() {
   return (
     <Router>
       <div className="App" style={{ filter: `brightness(${brightness}%)` }}>
-        {/* Navbar Section */}
-        <header>
-          <div className="navbar">
-            <ul className="left-nav">
-              <li><Link to="/home">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
-              <li><Link to="/contact">Contact Us</Link></li>
-              <li><Link to="/help">Help</Link></li>
-            </ul>
-            <div className="right-nav">
-              <label htmlFor="brightness">Brightness: </label>
-              <input
-                type="range"
-                id="brightness"
-                min="0"
-                max="200"
-                value={brightness}
-                onChange={handleBrightnessChange}
-              />
-              <Link to="/login">
-                <button id="sign-in">Sign In</button>
-              </Link>
-              <Link to="/signup">
-                <button id="sign-up">Sign Up</button>
-              </Link>
-            </div>
-          </div>
-        </header>
-
-        {/* Main Content Section */}
+        <Navbar brightness={brightness} handleBrightnessChange={handleBrightnessChange} />
         <main>
           <Routes>
             <Route path="/home" element={<Home />} />
@@ -58,7 +30,7 @@ function App() {
             <Route path="/help" element={<Help />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
-            <Route path="/" element={<Home />} /> {/* Default route */}
+            <Route path="/" element={<Home />} />
           </Routes>
         </main>
       </div>

@@ -1,13 +1,37 @@
 /* Login Page Styles */
 
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* No extra padding */
+    background: linear-gradient(to bottom right, #2B74E1, #76A2E3,#2B74E1); /* Gradient background */
+    box-sizing: border-box; /* Consistent sizing */
+    box-sizing: border-box;
+        background: linear-gradient(
+            rgba(15, 19, 59, 0.5), 
+            rgba(10, 16, 47, 0.5)
+        ), 
+        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
+        
+}
+
 .auth-form {
     display: flex;
     flex-direction: column;
+    font-weight: bold;;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background: linear-gradient(to bottom right, #1E90FF, #87CEFA, #F0F8FF);
-    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px; /* Limit width for larger screens */
+    text-align: left;
+    box-sizing: border-box;
 }
 
 .auth-form h2 {
@@ -15,18 +39,9 @@
     font-weight: bold;
     margin-bottom: 20px;
     color: #000;
-    background: linear-gradient(to bottom right, #F0F8FF, #87CEFA, #1E90FF);
+    background: linear-gradient(to bottom right, #2874E1, #100F36,#2874E1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.auth-form form {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    text-align: center;
 }
 
 .auth-form input {
@@ -36,6 +51,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 .auth-form input:focus {
@@ -47,7 +63,7 @@
 .auth-form button {
     width: 100%;
     padding: 10px;
-    background-color: #1E90FF;
+    background-color: #0c1939;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
@@ -58,21 +74,9 @@
 }
 
 .auth-form button:hover {
-    background-color: #4682B4;
+    background-color: #184264;
 }
 
 .auth-form button:active {
     transform: scale(0.98);
-}
-
-.auth-form a {
-    display: block;
-    margin-top: 15px;
-    color: #1E90FF;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.auth-form a:hover {
-    text-decoration: underline;
 }

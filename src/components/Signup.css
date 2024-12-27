@@ -9,6 +9,14 @@
     flex: full;
     background: linear-gradient(to bottom right, #2B74E1, #76A2E3,#E6EBF2);
     color: white;
+    box-sizing: border-box;
+        background: linear-gradient(
+            rgba(15, 19, 59, 0.5), 
+            rgba(10, 16, 47, 0.5)
+        ), 
+        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
+        
+   
   }
   
   .signup-card {
@@ -24,15 +32,16 @@
   .signup-title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
     color: #000;
-    background: linear-gradient(to bottom right, #E6EBF2, #76A2E3,#2874E1);
+    background: linear-gradient(to bottom right, #2874E1, #100F36,#2874E1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
   .signup-subtitle {
     margin-bottom: 1.5rem;
+    /* font-weight: bold; */
     color: #000;
   }
   
@@ -49,6 +58,7 @@
   .signup-form label {
     display: block;
     font-weight: lighter;
+    font-weight: bold;
     size:0cap;
     margin-bottom: 0.5rem;
     color: #000;
@@ -70,7 +80,7 @@
   .signup-button {
     width: 100%;
     padding: 0.8rem;
-    background-color: #000;
+    background-color: #171d3f;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -81,6 +91,6 @@
   }
   
   .signup-button:hover {
-    background-color: #3f4b91;
+    background-color: #1d2866;
   }
   

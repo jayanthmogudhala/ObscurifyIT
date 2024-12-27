@@ -27,7 +27,7 @@ function Home() {
 
   return (
     <div className="home-container">
-      <h1 className="welcome-title">Welcome to Automated Redaction</h1>
+      <h1 className="welcome-title">Welcome To Automated Redaction</h1>
       <div className="file-drop-section">
         <div className="file-drop" onClick={() => handleFileClick('csv')}>
           <p>Click to Upload CSV File</p>
