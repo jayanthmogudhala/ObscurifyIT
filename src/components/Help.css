@@ -1,0 +1,60 @@
+.help-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+    box-sizing: border-box;
+        background: linear-gradient(
+            rgba(15, 19, 59, 0.5), 
+            rgba(10, 16, 47, 0.5)
+        ), 
+        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
+    min-height: 100vh;
+  }
+  
+  .help-title {
+    font-size: 2.5rem;
+    color: #c4d2e0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .faq-section {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+  }
+  
+  .faq-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    transition: transform 0.2s;
+  }
+  
+  .faq-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .faq-question {
+    font-size: 1.2rem;
+    color: #003366;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .faq-answer {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+  

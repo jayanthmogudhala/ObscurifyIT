@@ -1,0 +1,76 @@
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+    box-sizing: border-box; 
+    box-sizing: border-box;
+        background: linear-gradient(
+            rgba(15, 19, 59, 0.5), 
+            rgba(10, 16, 47, 0.5)
+        ), 
+        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
+        
+    min-height: 100vh;
+  }
+  
+  .about-header {
+    margin-bottom: 30px;
+  }
+  
+  .about-header h1 {
+    font-size: 2.5rem;
+    color: #ecf0f4;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .about-header p {
+    font-size: 1.2rem;
+    color: #f2ecec;
+    margin-top: 10px;
+    line-height: 1.6;
+    max-width: 800px;
+  }
+  
+  .about-content {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .about-content p {
+    font-size: 1rem;
+    color: #eee4e4;
+    margin-bottom: 15px;
+    line-height: 1.8;
+  }
+  
+  .about-content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .about-content ul li {
+    text-align: left;
+    font-size: 1rem;
+    color: #0eace6;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  
+  .about-content ul li::before {
+    content: '✔';
+    color: #177bbe;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
