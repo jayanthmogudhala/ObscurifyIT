@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./Signup.css";
 
 const Signup = () => {
@@ -9,11 +9,21 @@ const Signup = () => {
   });
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
-  const navigate = useNavigate();
+
+  const validateEmail = (email) => {
+    // Basic email validation regex
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(null);
+
+    if (!validateEmail(formData.email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
 
     if (formData.password !== confirmPassword) {
       setError("Passwords do not match");
@@ -21,10 +31,11 @@ const Signup = () => {
     }
 
     try {
+      await axios.post("http://localhost:5000/signup", formData);
       alert("Sign-up successful!");
-      navigate("/login");
+      window.location.href = "/login"; // Redirect to login page
     } catch (error) {
-      setError("Sign-up failed: " + error.message);
+      setError("Sign-up failed: " + error.response?.data?.message);
     }
   };
 

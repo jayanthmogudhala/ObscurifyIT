@@ -1,38 +1,51 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import './Login.css';
+import React, { useState } from "react";
+import axios from "axios";
+import "./Login.css";
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [message, setMessage] = useState(null);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState(null); // For the popup message
+
+  const validateEmail = (email) => {
+    // Basic email validation regex
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:5000/login', { email, password });
+    if (!validateEmail(email)) {
+      setMessage("Please enter a valid email address.");
+      return;
+    }
 
-      setMessage('Login successful! Redirecting...');
-      
+    try {
+      const response = await axios.post("http://localhost:5000/login", {
+        email,
+        password,
+      });
+
+      // Store token in localStorage
+      localStorage.setItem("authToken", response.data.token);
+
+      // Show success message
+      setMessage("Login successful! Redirecting...");
+
+      // Redirect to home after 2 seconds
       setTimeout(() => {
-        window.location.href = '/';
+        window.location.href = "/"; // Replace '/' with your desired home route
       }, 2000);
     } catch (error) {
-      setMessage('Login failed: ' + (error.response?.data?.message || 'An error occurred.'));
+      setMessage(
+        "Login failed: " + (error.response?.data?.message || "An error occurred.")
+      );
     }
   };
 
   return (
     <div className="auth-page">
-        <video autoplay loop muted>
-            {/* <source src='/v1.mp4' type="video/mp4"  /> */}
-            Your browser does not support the video tag.
-        </video>
       <div className="auth-form">
-        <video autoplay loop muted>
-            {/* <source src='/v1.mp4' type="video/mp4"  /> */}
-            Your browser does not support the video tag.
-         </video>
         <h2>Login Here !!</h2>
         <form onSubmit={handleLogin}>
           <label>Email</label>

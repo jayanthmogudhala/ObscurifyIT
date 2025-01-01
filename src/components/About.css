@@ -7,7 +7,7 @@
     justify-content: center; /* Center content vertically */
     padding-bottom: 40px;
     min-height: 100vh; /* Ensures it takes the full height of the viewport */
-    background: url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png") no-repeat center center fixed;
+    background: url("C:\Users\mogud\OneDrive\Desktop\ObscurifyIT\src\components\km.png");
     background-size: cover;
     position: relative;
 }

@@ -1,62 +1,38 @@
-/* Signup Page Styles - Unified */
+/* Signup Page Styles */
+
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
- /* Removed gradient */
-    /* background-image: url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png") ; */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #2b74e1, #76a2e3, #e6ebf2);
   color: white;
   box-sizing: border-box;
-   animation: fadeIn 1s ease-in-out;
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 .signup-card {
+  background-color: #fff;
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   text-align: center;
   max-width: 400px;
   width: 90%;
-      /* Remove the background color and border*/
-        /* background-image:url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png") ; */
-    background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .signup-title {
-  font-size: 2.8rem;
-  margin-bottom: 1.3rem;
-  color: #000; /* Adjust if needed */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  animation: slideInDown 1s ease-in-out;
+  font-size: 24px;
   font-weight: bold;
+  margin-bottom: 1.3rem;
+  color: #000;
+  background: linear-gradient(to bottom right, #2874e1, #100f36, #2874e1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-@keyframes slideInDown {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+
 .signup-subtitle {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #000;
 }
 
 .signup-error {
@@ -73,7 +49,7 @@
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  color: #333;
+  color: #000;
 }
 
 .signup-form input {
@@ -92,6 +68,7 @@
 .signup-button {
   width: 100%;
   padding: 0.8rem;
+  background-color: #171d3f;
   color: white;
   font-size: 16px;
   font-weight: bold;
