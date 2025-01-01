@@ -1,83 +1,240 @@
-    .home-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-        height: 100vh;
-        font-family: Arial, sans-serif;
-        padding: 20px;
-        box-sizing: border-box;
-        background: linear-gradient(
-            rgba(15, 19, 59, 0.5), 
-            rgba(10, 16, 47, 0.5)
-        ), 
-        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
-        
-    }
-    
-
-.welcome-title {
-    font-size: 3.5rem;
-    color:#fff;
-    margin-bottom: 100px;
-    
-    text-shadow: 2px 2px 4px rgba(0.5, 0, 0, 0.3);
-
-    background-color: #ffffff;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-}
-
-.file-drop-section {
+/* Home.css */
+.home-container {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    min-height: 100vh;
+    color: black;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.selection-area {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.file-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-content {
+    text-align: center;
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: slideInDown 1s ease-in-out;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #eee;
+}
+
+.dropdown-container,
+.upload-container {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.dropdown-container:hover,
+.upload-container:hover {
+    transform: translateY(-5px);
+}
+
+.label {
+    color: white;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
     width: 100%;
 }
 
-.file-drop {
-    width: 200px;
-    height: 150px;
-    border: 2px dashed #aaa;
-    border-radius: 10px;
+.dropdown-button-container {
+    position: relative;
+}
+
+.dropdown-button {
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #333;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+.dropdown-button:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.dropdown-button .button-text {
+    flex: 1;
+    text-align: left;
+}
+
+.dropdown-button .dropdown-arrow {
+    margin-left: 10px;
+    pointer-events: none;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    margin-top: 5px;
+    padding: 0;
+    list-style: none;
+    z-index: 10;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.upload-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+.file-input {
+    display: none;
+}
+
+.file-name {
+    color: #777;
+    margin-top: 5px;
+}
+
+.drag-drop-text {
+    color: #777;
+    margin-top: 10px;
+}
+
+.upload-container.dragover {
+    border: 2px dashed #007bff;
+    background-color: rgba(173, 216, 230, 0.2);
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-menu li[selected] {
+    color: white;
+    background-color: #007bff;
+}
+
+.upload-container .label {
+    color: black;
+}
+
+.button-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-color: #efeff6;
-    transition: background-color 0.3s, border-color 0.3s;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.file-drop:hover {
-    background-color: #b5ccec;
-    border-color: #555;
-}
-
-.file-drop p {
-    font-size: 1.2rem;
-    color: #1d2151;
-    margin: 0;
-}
-
-.popup-message {
     margin-top: 20px;
-    padding: 10px 20px;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
-    background-color: #231953;
-    color: #ffffff;
+}
+
+.submit-button,
+.download-button {
+    padding: 12px 20px;
+    border: none;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-size: 1rem;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    background-color: #007bff;
+  color: white;
+}
+.submit-button:hover{
+       background-color: #0056b3;
+}
+.download-button:hover{
+    background-color: #0056b3;
 }

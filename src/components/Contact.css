@@ -1,83 +1,86 @@
+/* Contact Page Styles - Unified Background */
 .contact-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin: 0 auto;
-    height: 100vh;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    box-sizing: border-box;
-    /* background: linear-gradient(to bottom right, #3f72b8, #100f36); */
-    color: #fff;
-    box-sizing: border-box;
-        background: linear-gradient(
-            rgba(15, 19, 59, 0.5), 
-            rgba(10, 16, 47, 0.5)
-        ), 
-        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  /* Removed gradient */
+    background-image: url("C:\Users\mogud\OneDrive\Desktop\Automated-Redaction\public\km.png"); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+    
+  color: #fff;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation from home */
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .contact-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  to {
+    opacity: 1;
   }
-  
-  .contact-form {
+}
+.contact-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.contact-form {
     background-color: #ffffff;
+    /* Removed background color*/
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 100%;
-    max-width: 500px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-group label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #333;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    box-sizing: border-box;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: #0d2547;
-    outline: none;
-  }
-  
-  .submit-button {
-    background-color: #122847;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .submit-button:hover {
-    background-color: #2b4a88;
-  }
-  
-  .success-message {
-    margin-top: 20px;
-    color: #e1e4ec;
-    font-size: 1rem;
-  }
-  
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 500px;
+     /* background-image: url("C:\Users\mogud\OneDrive\Desktop\Automated-Redaction\public\km.png");   */
+  background-position: center;
+    background-repeat: no-repeat;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0d2547;
+  outline: none;
+}
+.submit-button {
+  background-color: #122847;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.submit-button:hover {
+  background-color: #2b4a88;
+}
+.success-message {
+  margin-top: 20px;
+  color: #e1e4ec;
+  font-size: 1rem;
+}

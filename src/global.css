@@ -1,0 +1,112 @@
+/* Reusable Classes - Based on Provided Home.css */
+/* Global Styles (global.css) */
+:root {
+    --background-color: white;
+    --text-color: #333;
+    --title-color: #fff;
+    --description-color: #eee;
+    --container-bg: rgba(255, 255, 255, 0.9);
+     --input-bg: white;
+    --button-bg: #007bff;
+     --button-hover: #0056b3;
+    --dropdown-arrow: #333;
+
+}
+
+.dark-mode{
+  --background-color: #1a1a1a;
+  --text-color: #eee;
+    --title-color: #ddd;
+    --description-color: #aaa;
+     --container-bg: rgba(40, 40, 40, 0.9);
+     --input-bg: #333;
+    --button-bg: #0056b3;
+     --button-hover: #007bff;
+    --dropdown-arrow: #eee;
+
+}
+.app-container {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.app-container:hover {
+    transform: translateY(-5px);
+}
+
+.app-label {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+
+.app-input, .app-dropdown {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+    background-color: #fff;
+    color: #333;
+    transition: border-color 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.app-dropdown{
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+}
+.app-input:focus, .app-dropdown:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.app-button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.app-button:hover {
+    background-color: #0056b3;
+}
+
+.app-title{
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #fff; /* White title */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    animation: slideInDown 1s ease-in-out;
+}
+
+@keyframes slideInDown {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+.app-description{
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #eee;
+}

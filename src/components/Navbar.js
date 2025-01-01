@@ -2,38 +2,28 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
-function Navbar({ brightness, handleBrightnessChange }) {
-  return (
-    <header className="navbar">
-      <div className="navbar-container">
-        <ul className="navbar-left">
-          <li><Link to="/home">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/help">Help</Link></li>
-        </ul>
-        <div className="navbar-right">
-          <div className="brightness-control">
-            <label htmlFor="brightness">Brightness:</label>
-            <input
-              type="range"
-              id="brightness"
-              min="0"
-              max="200"
-              value={brightness}
-              onChange={handleBrightnessChange}
-            />
-          </div>
-          <Link to="/login">
-            <button className="btn btn-sign-in">Login</button>
-          </Link>
-          <Link to="/signup">
-            <button className="btn btn-sign-up">Sign Up</button>
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+function Navbar() {
+    return (
+        <nav className="navbar">
+            <div className="navbar-container">
+                <div className="navbar-left-container">
+                  <h1 className='project-name'>
+                      <Link to="/">ObscurifyIT</Link>
+                   </h1>
+                    <ul className="navbar-left">
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/help">Help</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/history">History</Link></li> {/* Added History link */}
+                    </ul>
+                  </div>
+                <div className="navbar-right">
+                     <Link to="/login" className="btn btn-sign-in">Sign In</Link>
+                     <Link to="/signup" className="btn btn-sign-up">Sign Up</Link>
+                </div>
+            </div>
+        </nav>
+    );
 }
 
 export default Navbar;

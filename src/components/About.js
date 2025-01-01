@@ -4,44 +4,84 @@ import './About.css';
 function About() {
   return (
     <div className="about-container">
-      <div className="about-header">
-        <h1>About RE-DACT</h1>
-        <p>
-          Safeguarding sensitive information has never been more critical in the era of data-driven innovation. 
-          RE-DACT is here to provide an end-to-end, automated solution for secure data handling and redaction.
-        </p>
-      </div>
-      <div className="about-content">
-        <p>
-          The proliferation of digital data across industries such as healthcare, finance, and research has made 
-          safeguarding sensitive information a critical priority. RE-DACT, our automated redaction tool, provides 
-          a robust, versatile solution for obfuscating, anonymizing, and masking sensitive information across 
-          diverse data formats, including text, images, PDFs, and videos.
-        </p>
-        <p>
-          The primary objective of this project is to ensure secure data handling while preserving data utility, 
-          enabling compliance with stringent data privacy regulations like HIPAA and GDPR.
-        </p>
-        <p>
-          <strong>Key Features:</strong>
-        </p>
-        <ul>
-          <li>
-            <strong>Text Redaction:</strong> Powered by BERT-based models for precise, context-aware anonymization.
-          </li>
-          <li>
-            <strong>Structured Data:</strong> Uses PATE-GAN for generating high-quality synthetic datasets with 
-            statistical integrity.
-          </li>
-          <li>
-            <strong>Image Redaction:</strong> Employs OpenCV for detecting and masking sensitive regions like 
-            faces and signatures.
-          </li>
-        </ul>
-        <p>
-          By leveraging state-of-the-art technologies, RE-DACT balances the dual imperatives of data privacy and utility, 
-          providing a scalable, automated redaction solution to meet the growing demand for secure data handling.
-        </p>
+      <div className="about-content-wrapper">
+        <section className="hero-section">
+          <div className="hero-content">
+            <h1>About ObcusrifyIT</h1>
+            <p>
+              Secure your data with RE-DACT, the automated redaction tool that ensures
+              privacy across all your sensitive documents.
+            </p>
+            <a href="#features" className="learn-more-btn">
+              Learn More
+            </a>
+          </div>
+          <div className="hero-image-container">
+            <img src="/km.jpg" alt="Redaction Illustration" className="hero-image" />
+          </div>
+        </section>
+
+        <section id="features" className="features-section">
+          <h2>Key Features</h2>
+          <div className="feature-cards">
+            <div className="feature-card">
+              <img src="Redacted_image/redacted_pan_output.jpg" alt="Text Redaction" className="feature-icon" />
+              <h3>Intelligent Text Redaction</h3>
+              <p>
+                Powered by advanced models for context-aware anonymization, ensuring
+                sensitive text data is securely redacted.
+              </p>
+            </div>
+            <div className="feature-card">
+              <img src="Redacted_image/csv image.jpg" alt="Data Anonymization" className="feature-icon" />
+              <h3>Secure Structured Data</h3>
+              <p>
+                Generates high-quality, synthetic datasets using cutting-edge techniques to
+                maintain statistical integrity while protecting privacy.
+              </p>
+            </div>
+            <div className="feature-card">
+              <img src="/image-redaction.svg" alt="Image Redaction" className="feature-icon" />
+              <h3>Advanced Image Redaction</h3>
+              <p>
+                Detects and masks sensitive regions, such as faces and even text in image, with
+                high accuracy using sophisticated algorithms.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="commitment-section">
+          <div className="commitment-content">
+            <h2>Our Commitment</h2>
+            <p>
+              We are dedicated to providing top-tier security, cutting-edge
+              technology, and constant innovation to protect your sensitive information.
+              We understand that protecting your data and maintaining your trust is our top priority.
+            </p>
+          </div>
+          <div className="commitment-image-container">
+            <img src="/commitment.svg" alt="Commitment Illustration" className="commitment-image" />
+          </div>
+        </section>
+
+        <section className="value-section">
+          <h2>Why Choose ObcusrifyIT?</h2>
+          <div className="value-points">
+            <div className="value-point">
+              <h3>Efficiency</h3>
+              <p>Automated redaction saves you time and resources, eliminating tedious manual processes.</p>
+            </div>
+            <div className="value-point">
+              <h3>Accuracy</h3>
+              <p>Minimize errors and maintain precision in redaction tasks with our intelligent algorithms.</p>
+            </div>
+            <div className="value-point">
+              <h3>Compliance</h3>
+              <p>Ensure adherence to data privacy regulations like HIPAA, GDPR, and other standards.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

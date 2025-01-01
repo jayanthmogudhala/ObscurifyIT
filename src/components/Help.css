@@ -1,3 +1,4 @@
+/* Help Page Styles - Unified and Premium */
 .help-container {
     display: flex;
     flex-direction: column;
@@ -5,56 +6,109 @@
     padding: 20px;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-    box-sizing: border-box;
-        background: linear-gradient(
-            rgba(15, 19, 59, 0.5), 
-            rgba(10, 16, 47, 0.5)
-        ), 
-        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
     min-height: 100vh;
-  }
-  
-  .help-title {
-    font-size: 2.5rem;
-    color: #c4d2e0;
+    /* Remove gradient */
+    position: relative; /* for video positioning  */
+    color: white;
+    animation: fadeIn 1s ease-in-out;
+      overflow: hidden; /* to hide video overflow */
+}
+.help-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+      z-index: -1; /* place behind the content */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.help-title {
+    font-size: 2.8rem;
+    color: white;
     margin-bottom: 20px;
     text-align: center;
-  }
-  
-  .faq-section {
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    animation: slideInDown 1s ease-in-out;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.faq-section {
     width: 100%;
     max-width: 800px;
     margin-top: 20px;
-  }
-  
-  .faq-item {
-    background-color: #ffffff;
+}
+
+.faq-item {
+    /* Remove background color */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     margin-bottom: 20px;
     padding: 15px 20px;
-    transition: transform 0.2s;
-  }
-  
-  .faq-item:hover {
-    transform: translateY(-5px);
-  }
-  
-  .faq-question {
+    transition: transform 0.2s, box-shadow 0.3s ease;
+    /* remove border with gradient */
+    border: 1px solid #ccc; /* single color border */
+    position: relative; /* Position relative so ::before can be abs */
+    overflow: hidden; /* to hide video overflow */
+}
+.faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png"); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Place background behind the content */
+        opacity: 0.8; /* to add overlay in the background*/
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.faq-question {
     font-size: 1.2rem;
-    color: #003366;
+    color: #000; /* set to a darker color*/
     margin-bottom: 10px;
     font-weight: bold;
-  }
-  
-  .faq-answer {
+}
+
+.faq-answer {
     font-size: 1rem;
-    color: #555;
+   color: #222; /* set to darker color */
     line-height: 1.6;
-  }
-  
-  .faq-item:last-child {
+}
+
+.faq-item:last-child {
     margin-bottom: 0;
-  }
-  
+}

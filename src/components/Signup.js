@@ -18,7 +18,7 @@ const Signup = () => {
     if (formData.password !== confirmPassword) {
       setError("Passwords do not match");
       return;
-    }ca
+    }
 
     try {
       alert("Sign-up successful!");

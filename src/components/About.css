@@ -1,76 +1,82 @@
 .about-container {
+    font-family: 'Arial', sans-serif;
+    color: #333;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    background: linear-gradient(to bottom, #e0eafc, #cfdef3);
-    box-sizing: border-box; 
-    box-sizing: border-box;
-        background: linear-gradient(
-            rgba(15, 19, 59, 0.5), 
-            rgba(10, 16, 47, 0.5)
-        ), 
-        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
-        
-    min-height: 100vh;
-  }
-  
-  .about-header {
-    margin-bottom: 30px;
-  }
-  
-  .about-header h1 {
-    font-size: 2.5rem;
-    color: #ecf0f4;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
-  }
-  
-  .about-header p {
-    font-size: 1.2rem;
-    color: #f2ecec;
-    margin-top: 10px;
-    line-height: 1.6;
-    max-width: 800px;
-  }
-  
-  .about-content {
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background: transparent;
-    padding: 20px;
-    max-width: 800px;
-    width: 100%;
-  }
-  
-  .about-content p {
-    font-size: 1rem;
-    color: #eee4e4;
-    margin-bottom: 15px;
-    line-height: 1.8;
-  }
-  
-  .about-content ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .about-content ul li {
-    text-align: left;
-    font-size: 1rem;
-    color: #0eace6;
-    margin-bottom: 10px;
+    justify-content: center; /* Center content vertically */
+    padding-bottom: 40px;
+    min-height: 100vh; /* Ensures it takes the full height of the viewport */
+    background: url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png") no-repeat center center fixed;
+    background-size: cover;
     position: relative;
-  }
-  
-  .about-content ul li::before {
-    content: '✔';
-    color: #177bbe;
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  
+}
+
+.about-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+    z-index: 0;
+}
+
+.about-content-wrapper {
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px; /* Constrain the width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Optional spacing around the content */
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.hero-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.hero-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    max-width: 300px;
+    height: auto;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    background: #5b4fa7;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background: #5b4fa7cc;
+}
+
+/* Remaining styles unchanged from your existing About.css file */

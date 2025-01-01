@@ -1,96 +1,106 @@
-/* Signup Page Styles */
-
+/* Signup Page Styles - Unified */
 .signup-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    display: flex;
-    flex: full;
-    background: linear-gradient(to bottom right, #2B74E1, #76A2E3,#E6EBF2);
-    color: white;
-    box-sizing: border-box;
-        background: linear-gradient(
-            rgba(15, 19, 59, 0.5), 
-            rgba(10, 16, 47, 0.5)
-        ), 
-        url('C:\Users\parva\OneDrive\Desktop\frontend\src\components\images\image2.jpg') no-repeat center center/cover;
-        
-   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+ /* Removed gradient */
+    /* background-image: url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png") ; */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  color: white;
+  box-sizing: border-box;
+   animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .signup-card {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    max-width: 400px;
-    width: 90%;
+  to {
+    opacity: 1;
   }
-  
-  .signup-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 1.3rem;
-    color: #000;
-    background: linear-gradient(to bottom right, #2874E1, #100F36,#2874E1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+.signup-card {
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+      /* Remove the background color and border*/
+        /* background-image:url("C:/Users/mogud/OneDrive/Desktop/Automated-Redaction/public/km.png") ; */
+    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.signup-title {
+  font-size: 2.8rem;
+  margin-bottom: 1.3rem;
+  color: #000; /* Adjust if needed */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  animation: slideInDown 1s ease-in-out;
+  font-weight: bold;
+}
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
   }
-  
-  .signup-subtitle {
-    margin-bottom: 1.5rem;
-    /* font-weight: bold; */
-    color: #000;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .signup-error {
-    color: #ff4d4f;
-    margin-bottom: 1rem;
-  }
-  
-  .signup-form .form-group {
-    margin-bottom: 1.2rem;
-    text-align: left;
-  }
-  
-  .signup-form label {
-    display: block;
-    font-weight: lighter;
-    font-weight: bold;
-    size:0cap;
-    margin-bottom: 0.5rem;
-    color: #000;
-  }
-  
-  .signup-form input {
-    width: 100%;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .signup-form input:focus {
-    outline: none;
-    border-color: #5c6bc0;
-  }
-  
-  .signup-button {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #171d3f;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .signup-button:hover {
-    background-color: #1d2866;
-  }
-  
+}
+.signup-subtitle {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.signup-error {
+  color: #ff4d4f;
+  margin-bottom: 1rem;
+}
+
+.signup-form .form-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.signup-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.signup-form input:focus {
+  outline: none;
+  border-color: #5c6bc0;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 0.8rem;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #1d2866;
+}
