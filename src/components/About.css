@@ -7,7 +7,7 @@
     justify-content: center; /* Center content vertically */
     padding-bottom: 40px;
     min-height: 100vh; /* Ensures it takes the full height of the viewport */
-    background: url("C:\Users\mogud\OneDrive\Desktop\ObscurifyIT\src\components\km.png");
+    background-image: url('./contactimg.jpg'); /* Set aboutimg as background */
     background-size: cover;
     position: relative;
 }
@@ -78,5 +78,3 @@ section {
 .learn-more-btn:hover {
     background: #5b4fa7cc;
 }
-
-/* Remaining styles unchanged from your existing About.css file */
