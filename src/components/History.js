@@ -41,7 +41,7 @@ function History() {
                             <li key={index}>
                                 <p><strong>Original File:</strong> {item.originalName}</p>
                                 <p><strong>Redacted Content:</strong></p>
-                                <pre>{item.redactedContent}</pre>
+                            
                             </li>
                         ))}
                     </ul>
